@@ -42,7 +42,7 @@ function novo(){ for (let i = 0; i < num(x); i++) {
     grids.classList.add ("square")
     grids.style.width = grid(x)
     grids.style.height = grid(x)
-    container.style.height = `${x * lines(x)}px`
+    container.style.height = `${Math.floor(x * lines(x))}px`
     container.append(grids)}}
 
 
