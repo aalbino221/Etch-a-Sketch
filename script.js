@@ -1,6 +1,6 @@
 const body = document.body
 let container = document.querySelector(".container")
-let x = 16
+let x = 32
 const reset = document.querySelector(".reset")
 const size = document.querySelector(".size")
 const rainbow = document.querySelector(".rainbow")
@@ -21,6 +21,9 @@ function rainbow2() {
 function grid(x) {let TA = 490000 ; let TS = x*x ; let func = Math.sqrt((TA/TS)) ; 
     let num = Math.floor((func*100))/100 ; return (num) + "px"}
 
+function lines(x) {let TA = 490000 ; let TS = x*x ; let func = Math.sqrt((TA/TS)) ; 
+    let num = Math.floor((func*100))/100 ; return (num)}
+
 function num (x) {return x*x}
 
 function sensor() {for (let i = 0 ; i <num(x); i++) {const squares = document.querySelectorAll (".square") ;
@@ -34,10 +37,12 @@ function remover() {
     body.append(container2)
     container = document.querySelector(".container")}
 
-function novo(){ for (let i = 0; i < num(x); i++) {const grids = document.createElement("div")
+function novo(){ for (let i = 0; i < num(x); i++) {
+    const grids = document.createElement("div")
     grids.classList.add ("square")
     grids.style.width = grid(x)
     grids.style.height = grid(x)
+    container.style.height = `${x * lines(x)}px`
     container.append(grids)}}
 
 
