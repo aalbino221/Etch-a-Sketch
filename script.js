@@ -1,6 +1,6 @@
 const body = document.body
 let container = document.querySelector(".container")
-let x = 32
+let x = 16
 const reset = document.querySelector(".reset")
 const size = document.querySelector(".size")
 const rainbow = document.querySelector(".rainbow")
